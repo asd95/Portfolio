@@ -1,5 +1,4 @@
 @import url(reset.css);
-
 * {
   box-sizing: border-box;
 }
@@ -21,10 +20,13 @@
   background: #9b41d5;
 }
 
+:root{
+  font-size: 16px;
+}
+
 body {
   min-height: 100vh;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-size: 20px;
   color: #fff;
   user-select: none;
   -moz-user-select: none;
@@ -56,7 +58,7 @@ a:hover {
 .header {
   width: 100%;
   position: fixed;
-  padding: 0.3rem 1rem;
+  padding: 0.3em 1em;
   z-index: 11;
   background-color: rgb(22, 21, 23, 0.9);
   display: flex;
@@ -96,12 +98,7 @@ a:hover {
 }
 
 .social-media {
-  /* position: absolute; */
-  /* bottom: 3rem; */
-  /* right: 3rem; */
-  /* display: none; */
-  /* display: flex; */
-  display: none;
+  display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: center;
@@ -113,17 +110,13 @@ a:hover {
 
 .social-media_item a {
   display: block;
-  padding: 0.3rem;
+  padding: 0.3em;
   border-radius: 3px;
-  /* background: #fed104; */
-  /* color: #2e2833; */
 }
 
 .social-media_item a:hover {
   background: #fed104;
   color: #2e2833;
-  /* background: none; */
-  /* color: #fff */
 }
 
 .social-media_item i {
@@ -131,9 +124,53 @@ a:hover {
 }
 
 .active-social {
-  display: flex;
+  display: none;
 }
 
+
+.wrapper-menu {
+  display: none;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 330ms ease-out;
+}
+
+.wrapper-menu.open {
+  transform: rotate(-45deg);
+}
+
+.line-menu {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height: 4px;
+}
+
+.line-menu.half {
+  width: 50%;
+}
+
+.line-menu.start {
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: right;
+}
+
+.open .line-menu.start {
+  transform: rotate(-90deg) translateX(3px);
+}
+
+.line-menu.end {
+  align-self: flex-end;
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: left;
+}
+
+.open .line-menu.end {
+  transform: rotate(-90deg) translateX(-3px);
+}
 /* -------------------- / HEADER -------------------- */
 
 /* -------------------- MAIN -------------------- */
@@ -176,29 +213,48 @@ a:hover {
 
 .main-subtitle {
   display: inline-block;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #333;
-  border-radius: 0.3rem;
+  margin: .5em 0 .6em 0;
+  padding: 0.5em 1em;
+  border-radius: 0.3em;
+  background: #222;
   color: #9B41D5;
-  /* color: #00D583; */
-  /* color: #028eee; */
+}
+
+.main .active-social {
+  display: none;
+  font-size: 1.1rem;
+}
+
+.active-social_item {
+  margin-left: .5em;
+}
+
+.active-social_item a {
+  display: block;
+  font-size: 1em;
+  padding: 0.3em;
+  border-radius: .3em;
+}
+
+.active-social_item a:hover {
+  background: #fed104;
+  color: #2e2833;
+}
+
+.active-social_item i {
+  font-size: 1em;
 }
 
 .main .welcome {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 2rem;
   font-size: .8rem;
+  bottom: 2rem;
   font-weight: bolder;
   color: #fff;
-}
-
-.main .social-media {
-  display: none;
 }
 
 /* -------------------- /MAIN -------------------- */
@@ -211,6 +267,7 @@ a:hover {
 }
 
 .aboutme .container {
+  padding-top: 3.5rem;
   display: flex;
   min-height: 100vh;
   align-items: center;
@@ -244,8 +301,7 @@ a:hover {
   position: relative;
   margin-top: 2.5rem;
   font-size: 1.1rem;
-  line-height: 1.4rem;
-  /* letter-spacing: 1px; */
+  line-height: 1.2em;
   z-index: 1;
 }
 
@@ -254,6 +310,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .features {
@@ -263,7 +320,6 @@ a:hover {
 .features__item {
   position: relative;
   margin: 2rem 0;
-  /* font-size: 1.5rem; */
 }
 
 .font-marker {
@@ -271,37 +327,18 @@ a:hover {
   font-size: 1.5rem;
 }
 
-/* .features-item::before {
-  content: '';
-  width: .2rem;
-  height: 100%;
-  background-color: #7CFF00;
-  position: absolute;
-  left: -.5rem;
-  top: 0;
-}
-.features-item::after {
-  content: '';
-  width: .1rem;
-  height: 80%;
-  background-color: #FF0057;
-  position: absolute;
-  left: -.6rem;
-  top: 50%;
-  transform: translateY(-50%);
-} */
-
 /* -------------------- /ABOUTME -------------------- */
 
 /* -------------------- PROJECTS -------------------- */
 
 .portfolio {
   background-color: #0e0d0d;
+  /* display: none; */
 }
 
 .portfolio .container {
   display: block;
-  padding-top: 50px;
+  padding-top: 3.5rem;
   padding-bottom: 1rem;
   min-height: 100vh;
 }
@@ -389,7 +426,7 @@ a:hover {
 .navbar-nav-proj {
   margin: 1rem 0 1rem 1rem;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: start;
   align-items: center;
 }
@@ -435,14 +472,14 @@ a:hover {
   /* padding: .3rem; */
   /* background-color: #fed104; */
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   /* grid-gap: .2rem; */
 }
 
 .box-item {
   position: relative;
   max-height: 100%;
-  margin: .1rem;
+  margin: .2rem;
   border: 1px solid #fed104;
   overflow: hidden;
 }
@@ -559,6 +596,7 @@ a:hover {
 .contacts {
   position: relative;
   z-index: 10;
+  /* display: none; */
 }
 
 .contacts .footer-img {
@@ -611,48 +649,3 @@ a:hover {
 }
 
 /* -------------------- /CONTACTS -------------------- */
-
-/* 
-@media (max-width: 360px) {
-  .i-am .dev {
-    font-size: 1rem;
-  }
-  .web-tech {
-    font-size: 1rem;
-  }
-  .social-media {
-    display: none;
-  }
-
-  .navbar-nav {
-    display: none;
-  }
-  .aboutme .container {
-    min-height: 100vh;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-  }
-} */
-
-/* -------------------- MEDIA-QUERIES -------------------- */
-
-@media screen and (max-width:768px) {
-
-  .header .active-social {
-    display: none;
-  }
-
-  .main .active-social {
-    display: flex;
-    position: absolute;
-    right: 5rem;
-    bottom: 1rem;
-  }
-}
-
-@media screen and (max-width:567px) {}
-
-@media screen and (max-width:320px) {}
-
-/* -------------------- /MEDIA-QUERIES -------------------- */

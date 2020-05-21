@@ -34,6 +34,11 @@ $(window).scroll(function () {
 // FOOTER ANIMATIONS-BG ///////////////////////
 
 
+let wrapperMenu = document.querySelector('.wrapper-menu');
+wrapperMenu.addEventListener('click', function () {
+  wrapperMenu.classList.toggle('open');
+})
+
 // // NAV POSITION
 //   var navPos = $('nav').position().top;
 //   var lastPos = 0;

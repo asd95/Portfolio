@@ -1,0 +1,402 @@
+@media screen and (max-width:850px) {
+
+    /* aboutme */
+    .i-am .who {
+        font-size: 2.5rem;
+    }
+
+    .i-am .dev {
+        font-size: 4rem;
+    }
+
+    /* /aboutme */
+
+    /* portfolio */
+
+    /* /portfolio */
+}
+
+@media screen and (max-width:768px) {
+
+    /* ----- header ----- */
+    .header .social-media {
+        display: none;
+    }
+
+    /* ----- /header ----- */
+
+    /* ----- main ----- */
+    .main .main-title {
+        font-size: 5rem;
+    }
+
+    .main .active-social {
+        display: flex;
+    }
+
+    /* ----- /main ----- */
+
+    /* ----- aboutme ----- */
+    .aboutme .container {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .i-am {
+        flex: none;
+    }
+
+    .interesting-inform {
+        flex: none;
+    }
+
+    .features__item {
+        margin: 1rem 0;
+    }
+
+    /* ----- /aboutme ----- */
+
+    /* portfolio */
+
+    .web-tech {
+        font-size: 8rem;
+    }
+
+    /* /portfolio */
+}
+
+@media screen and (max-width:567px) {
+
+    /* ----- header ----- */
+    .header .navbar {
+        display: none;
+    }
+
+    .wrapper-menu {
+        display: flex;
+    }
+
+    /* ----- /header ----- */
+
+    /* ----- main ----- */
+
+    .main .main-title {
+        font-size: 4rem;
+    }
+
+    .main .welcome {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* ----- /main ----- */
+
+    /* ----- aboutme ----- */
+    .i-am .who {
+        font-size: 2.2rem;
+    }
+
+    .i-am .dev {
+        font-size: 3.3rem;
+    }
+
+    .my-desc {
+        font-size: 1rem;
+    }
+
+    /* ----- /aboutme ----- */
+
+    /* portfolio */
+
+    .tech__title {
+        margin: .5rem 2rem;
+    }
+
+    .web-tech {
+        font-size: 6.7rem;
+        left: 3rem;
+        top: -1rem;
+    }
+    /* /portfolio */
+
+    /* contacts */
+
+    .contacts-list {
+        font-size: 1rem;
+    }
+
+    .contacts-list .list-item {
+        margin: 1.4rem;
+    }
+
+    .contacts .gb {
+        font-size: 1.7rem;
+    }
+    
+    /* /contacts */
+}
+
+@media screen and (max-width:400px) {
+
+    /* ----- main ----- */
+    .main .container {
+        align-items: center;
+    }
+
+    .main .main-title {
+        font-size: 3rem;
+    }
+
+    .main .main-subtitle {
+        font-size: .9rem;
+    }
+
+    /* ----- /main ----- */
+
+    /* ----- aboutme ----- */
+
+    .aboutme .container {
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .features {
+        margin-left: 0;
+    }
+
+    .features__item {
+        margin: 1rem 0;
+    }
+
+    .i-am .who {
+        font-size: 2rem;
+    }
+
+    .i-am .dev {
+        font-size: 3rem;
+        left: 1rem;
+        top: 1.5rem;
+    }
+
+    .features__item {
+        margin: .5rem 0;
+    }
+
+    /* ----- /aboutme ----- */
+
+    /* portfolio */
+    .tech {
+        align-items: center;
+        position: relative;
+    }
+
+    .tech__title {
+        margin: 0.5rem 0;
+        position: static;
+    }
+
+    .web-tech {
+        font-size: 5rem;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    .projects-title {
+        text-align: center;
+    }
+
+    .navbar-nav-proj {
+        margin: .8rem 0.5rem;
+        justify-content: space-evenly;
+    }
+
+    .proj-link {
+        font-size: .8rem;
+    }
+
+    .navbar-nav-proj__item {
+        margin: 0;
+        margin-bottom: .3rem;
+    }
+
+    .project-box {
+        margin-top: 1.5rem;
+    }
+    /* /portfolio */
+
+
+    /* contacts */
+
+    .contacts-list {
+        font-size: .9rem;
+    }
+
+    .contacts-list .list-item {
+        margin: 1.4rem;
+    }
+
+    .contacts .gb {
+        font-size: 1.4rem;
+    }
+    .contacts-list .list-item {
+        text-align: center;
+    }
+
+    /* /contacts */
+}
+
+
+@media screen and (max-width:355px) {
+    .tech-items {
+        justify-content: center;
+    }
+
+}
+
+@media screen and (max-height:414px) {
+
+    /* ----- main ----- */
+    .main .main-title {
+        font-size: 4rem;
+    }
+
+    .main .main-subtitle {
+        font-size: .8rem;
+    }
+
+    .main .active-social {
+        font-size: 1rem;
+    }
+
+    /* ----- /main ----- */
+
+    /* ----- aboutme ----- */
+
+    .i-am .who {
+        font-size: 2rem;
+    }
+
+    .i-am .dev {
+        font-size: 3.5rem;
+    }
+
+    .my-desc {
+        font-size: 1rem;
+    }
+
+    .interesting-inform {
+        font-size: 1rem;
+    }
+
+    /* ----- /aboutme ----- */
+}
+
+@media screen and (max-width:567px) and (min-height:700px) {
+
+    /* ----- main ----- */
+    .main .container {
+        align-items: center;
+    }
+
+    .main .active-social {
+        font-size: 1.5em;
+    }
+
+    /* ----- /main ----- */
+
+    /* ----- aboutme ----- */
+
+    /* ----- /aboutme ----- */
+}
+
+@media screen and (min-height:1024px) {
+
+    /* ----- main ----- */
+    .main .main-title {
+        font-size: 6rem;
+        margin-bottom: .5rem;
+    }
+
+    .main .main-subtitle {
+        font-size: 2rem;
+        color: #9b41d5;
+    }
+
+    .main .welcome {
+        position: absolute;
+        width: 100%;
+        bottom: 2rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: #fff;
+    }
+
+    .main .active-social {
+        font-size: 2em;
+    }
+
+    /* ----- /main ----- */
+
+    /* ----- aboutme ----- */
+
+    .i-am .who {
+        font-size: 3rem;
+    }
+
+    .i-am .dev {
+        font-size: 5rem;
+    }
+
+    .my-desc {
+        font-size: 1.3rem;
+    }
+
+    .interesting-inform {
+        font-size: 1.3rem;
+    }
+
+    /* ----- /aboutme ----- */
+
+    /* portfolio */
+
+    .tech-item>img {
+        max-width: 55px;
+        min-height: 55px;
+        margin: .7rem;
+        margin-bottom: .3rem;
+    }
+
+    .tech-item__name {
+        font-size: .7rem;
+    }
+
+
+    .proj-link {
+        font-size: 1.2rem;
+    }
+
+    .project-box {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    /* /portfolio */
+
+    /* contacts */
+
+    .contacts-list {
+        font-size: 1.5rem;
+    }
+
+    .contacts-list .list-item {
+        margin: 1.8rem;
+    }
+
+    .contacts .gb {
+        font-size: 2.7rem;
+    }
+
+    /* /contacts */
+}
