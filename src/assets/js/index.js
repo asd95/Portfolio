@@ -23,7 +23,7 @@ const imageFooter = $('.footer-img');
 $(window).scroll(function () {
   const scrollTop = document.documentElement.scrollTop;
   const pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const footerSize = Math.floor(document.documentElement.clientHeight/2.2);
+  const footerSize = Math.floor(document.documentElement.clientHeight/2.1);
   const heightContent = pageHeight - footerSize;
   if (heightContent <= scrollTop) {
     const sizeVH =  (scrollTop - heightContent)/ footerSize * 100;

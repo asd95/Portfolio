@@ -630,6 +630,7 @@ a:hover {
   align-items: center;
   background-color: #FEB400;
   z-index: 10;
+  padding-bottom: .5rem;
 }
 
 .contacts-list {
@@ -640,7 +641,7 @@ a:hover {
 }
 
 .contacts-list .list-item {
-  margin: 1.5rem;
+  margin: 1.4rem;
 }
 
 .contacts .gb {

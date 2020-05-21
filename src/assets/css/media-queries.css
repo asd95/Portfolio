@@ -234,7 +234,7 @@
     }
 
     .contacts-list .list-item {
-        margin: 1.4rem;
+        margin: 1.2rem;
     }
 
     .contacts .gb {
@@ -309,6 +309,7 @@
     /* ----- aboutme ----- */
 
     /* ----- /aboutme ----- */
+
 }
 
 @media screen and (min-height:1024px) {
