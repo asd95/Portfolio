@@ -51,6 +51,9 @@
         flex: none;
     }
 
+    .features {
+        margin-left: 0;
+    }
     .features__item {
         margin: 1rem 0;
     }
@@ -75,6 +78,7 @@
 
     .wrapper-menu {
         display: flex;
+        z-index: 1000;
     }
 
     /* ----- /header ----- */
@@ -137,7 +141,7 @@
     /* /contacts */
 }
 
-@media screen and (max-width:404px) {
+@media screen and (max-width:414px) {
 
     /* ----- main ----- */
     .main .container {
@@ -160,10 +164,6 @@
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-    }
-
-    .features {
-        margin-left: 0;
     }
 
     .features__item {
@@ -291,6 +291,16 @@
     }
 
     /* ----- /aboutme ----- */
+}
+
+@media screen and (min-height:700px) {
+    .main .main-subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .main .active-social {
+        font-size: 1.5em;
+    }
 }
 
 @media screen and (max-width:567px) and (min-height:700px) {

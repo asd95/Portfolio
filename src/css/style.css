@@ -27,11 +27,12 @@
 body {
   min-height: 100vh;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  color: #fff;
+  color: #eee;
   user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
+  /* overflow: hidden; */
 }
 
 a {
@@ -173,15 +174,50 @@ a:hover {
 }
 /* -------------------- / HEADER -------------------- */
 
+/* MENU for mobile */
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  z-index: 20;
+  min-width: 320px;
+  width: 25%;
+  height: 50%;
+}
+
+.navbar-mobile {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem;
+}
+/* /MENU for mobile */
+
 /* -------------------- MAIN -------------------- */
 
 .main {
   position: relative;
   background: url(../img/bg.jpg) no-repeat center center fixed;
+  /* background: url(../img/project-img/bg-footer17.jpg) no-repeat center center fixed; */
   background-size: cover;
   z-index: 1;
   width: 100%;
   height: 100%;
+  min-height: calc(var(--vh, 1vh) * 100);
   /* display: none; */
 }
 
@@ -200,6 +236,7 @@ a:hover {
 .main .container {
   position: relative;
   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -272,6 +309,7 @@ a:hover {
   padding-top: 3.5rem;
   display: flex;
   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   align-items: center;
 }
 
@@ -343,6 +381,7 @@ a:hover {
   padding-top: 3.5rem;
   padding-bottom: 1rem;
   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 /* TECH STACK */
@@ -434,23 +473,20 @@ a:hover {
 }
 
 .navbar-nav-proj__item {
-  margin-right: .5rem;
-  position: relative;
   display: flex;
-}
-
-.proj-link {
   position: relative;
-  font-size: .9rem;
-  text-transform: capitalize;
+  margin-right: .5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: ease-in-out 0.2s;
   color: #999;
 }
 
-.proj-link:hover {
-  color: #777;
+.navbar-nav-proj__item:hover {
+  cursor: pointer;
 }
-
-.proj-link::after {
+.navbar-nav-proj__item::after {
   content: '';
   position: absolute;
   width: 0;
@@ -461,21 +497,18 @@ a:hover {
   transition: ease-in .2s;
 }
 
-.proj-link:hover::after {
+.navbar-nav-proj__item:hover::after {
   width: 60%;
 }
 
-.proj-link.active-link {
+.active-link {
   color: #fed104;
 }
 
 .project-box {
   margin-top: 1rem;
-  /* padding: .3rem; */
-  /* background-color: #fed104; */
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  /* grid-gap: .2rem; */
 }
 
 .box-item {
@@ -597,19 +630,28 @@ a:hover {
 /* -------------------- CONTACTS -------------------- */
 .contacts {
   position: relative;
-  z-index: 10;
   /* display: none; */
+  height: 100vh;
+  /* border-top: 5px solid #fed104; */
+}
+
+.contacts h3 {
+  border-bottom: 1px solid #fff;
+  font-size: 1.2rem;
 }
 
 .contacts .footer-img {
   position: absolute;
   width: 100%;
-  height: 0;
+  min-height: 100%;
+  /* min-height: calc(var(--vh, 1vh) * 1); */
+  /* background: url(../img/project-img/bg-footer17.jpg) no-repeat top center; */
   background: url(../img/project-img/bg-footer14.jpg) no-repeat top center;
-  background-size: cover;
+  /* background-size: cover; */
   left: 0;
   bottom: 0;
   z-index: -1;
+  transition: ease-in-out .5s;
 }
 
 .contacts .footer-img::after {
@@ -618,37 +660,51 @@ a:hover {
   width: 100%;
   height: 100%;
   background-color: #000;
-  opacity: .6;
-  z-index: 20;
+  opacity: .8;
 }
 
 .contacts .container {
+  position: absolute;
+  bottom: 0;
   min-width: 100%;
-  min-height: 35vh;
+  min-height: 100vh;
+  height: calc(var(--vh, 1vh) * 35);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   font-family: 'Chewy';
   align-items: center;
-  background-color: #FEB400;
-  z-index: 10;
   padding-bottom: .5rem;
+  z-index: -1;
 }
 
 .contacts-list {
+  bottom: 0;
   font-weight: bold;
   letter-spacing: 3px;
-  font-size: 1.1rem;
+  word-spacing: 3px;
+  font-size: 1.2rem;
 }
 
 .contacts-list .list-item {
   color: #000;
+  color: #fed104;
+  padding: 1rem;
+  background-color: #9B41D5;
+  background-color: rgb(255, 183, 0);
+  background-color: #000;
   margin: 1.4rem;
 }
 
 .contacts .gb {
   font-size: 2rem;
-  color: #000;
+  padding: 1rem;
+  color: #9B41D5;
+  color: #fff;
+  color: #fed104;
+  background-color: #9B41D5;
+  background-color: rgb(255, 183, 0);
+  background-color: #000;
 }
 
 /* -------------------- /CONTACTS -------------------- */

@@ -4,13 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link
-    href="https://fonts.googleapis.com/css?family=Chewy|Permanent+Marker|Gloria+Hallelujah|Montserrat&display=swap"
+  <link href="https://fonts.googleapis.com/css?family=Chewy|Permanent+Marker|Gloria+Hallelujah|Montserrat&display=swap"
     rel="stylesheet" />
   <script src="https://kit.fontawesome.com/be8f276517.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./src/assets/css/style.css" />
-  <link rel="stylesheet" href="./src/assets/css/media-queries.css" />
-  <link rel="icon" href="./src/assets/img/technology1.svg">
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="stylesheet" href="./src/css/media-queries.css" />
+  <link rel="icon" href="./src/img/technology1.svg">
   <title>Portfolio</title>
 </head>
 
@@ -18,42 +17,63 @@
   <!---------------------------------- HEADER ---------------------------------->
   <header class="header">
     <!-- <container class="container"> -->
-      <span class="logo"><img src="./src/assets/img/logo-yellow.svg" alt=""></span>
-      <nav class="navbar">
-        <ul class="navbar-nav">
-          <li class="navbar-nav__item">
+    <span class="logo"><img src="./src/img/logo-yellow.svg" alt=""></span>
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li class="navbar-nav__item">
+          <a href="#home" class="item-link nav-active">Home</a>
+        </li>
+        <li class="navbar-nav__item">
+          <a href="#aboutme" class="item-link">About Me</a>
+        </li>
+        <li class="navbar-nav__item">
+          <a href="#portfolio" class="item-link">Portfolio</a>
+        </li>
+        <li class="navbar-nav__item">
+          <a href="#contacts" class="item-link">Contacts</a>
+        </li>
+        </li>
+      </ul>
+    </nav>
+    <div class="social-media">
+      <div class="social-media_item">
+        <a href="www.linkedin.com/in/arturseu" target="blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="social-media_item">
+        <a href="https://github.com/asd95" target="blank"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="social-media_item">
+        <a href="https://vk.com/id512626593" target="blank"><i class="fab fa-vk"></i></a>
+      </div>
+    </div>
+
+    <div class="wrapper-menu">
+      <div class="line-menu half start"></div>
+      <div class="line-menu"></div>
+      <div class="line-menu half end"></div>
+    </div>
+    <!---------------------------------- MENU MOBILE ---------------------------------->
+    <div class="mobile-menu">
+      <nav class="navbar-mobile">
+        <ul class="mobile-nav">
+          <li class="mobile-nav__item">
             <a href="#home" class="item-link nav-active">Home</a>
           </li>
-          <li class="navbar-nav__item">
+          <li class="mobile-nav__item">
             <a href="#aboutme" class="item-link">About Me</a>
           </li>
-          <li class="navbar-nav__item">
+          <li class="mobile-nav__item">
             <a href="#portfolio" class="item-link">Portfolio</a>
           </li>
-          <li class="navbar-nav__item">
+          <li class="mobile-nav__item">
             <a href="#contacts" class="item-link">Contacts</a>
           </li>
           </li>
         </ul>
       </nav>
-      <div class="social-media">
-        <div class="social-media_item">
-          <a href="www.linkedin.com/in/arturseu" target="blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-        <div class="social-media_item">
-          <a href="https://github.com/asd95" target="blank"><i class="fab fa-github"></i></a>
-        </div>
-        <div class="social-media_item">
-          <a href="https://vk.com/id512626593" target="blank"><i class="fab fa-vk"></i></a>
-        </div>
-      </div>
+    </div>
+    <!---------------------------------- /MENU MOBILE ---------------------------------->
 
-      <div class="wrapper-menu">
-        <div class="line-menu half start"></div>
-        <div class="line-menu"></div>
-        <div class="line-menu half end"></div>
-      </div>
-    <!-- </container> -->
     <!-- /.container -->
   </header>
   <!---------------------------------- /HEADER ---------------------------------->
@@ -66,7 +86,7 @@
         Front-end ReactJS Developer
       </h2>
 
-      
+
       <div class="active-social">
         <div class="active-social_item">
           <a href="www.linkedin.com/in/arturseu" target="blank"><i class="fab fa-linkedin"></i></a>
@@ -176,39 +196,43 @@
       <!-- /tech -->
 
       <div class="projects">
+
         <h2 class="projects-title">
           - Projects -
         </h2>
+
         <nav class="navbar-proj">
           <ul class="navbar-nav-proj">
-            <li class="navbar-nav-proj__item"><a href="#" class="proj-link active-link">All</a></li>
-            <li class="navbar-nav-proj__item"><a href="#" class="proj-link">Layout</a></li>
-            <li class="navbar-nav-proj__item"><a href="#" class="proj-link">Features</a></li>
-            <li class="navbar-nav-proj__item"><a href="#" class="proj-link">JavaScript</a></li>
-            <li class="navbar-nav-proj__item"><a href="#" class="proj-link">ReactJS</a></li>
+            <li class="navbar-nav-proj__item active-link" data-filter=".all">All</li>
+            <li class="navbar-nav-proj__item" data-filter=".layout">Layout</li>
+            <li class="navbar-nav-proj__item" data-filter=".features">Features</li>
+            <li class="navbar-nav-proj__item" data-filter=".js">JavaScript</li>
+            <li class="navbar-nav-proj__item" data-filter=".react">ReactJS</li>
           </ul>
         </nav>
-        <div class="project-box">
-          <div class="box-item">
-            <div class="box-cart">
-              <div class="first-cart">
-                <span class="desc-proj">UI Library</span>
-                <i class="far fa-eye"></i>
+
+        <div class="project-box ">
+          <div class="box-item all js">
+              <div class="box-cart">
+                <div class="first-cart">
+                  <span class="desc-proj">UI Library</span>
+                  <i class="far fa-eye"></i>
+                </div>
+                <div class="second-cart">
+                  <span class="cart-github"><a href="https://github.com/asd95" target="_blank">GitHub</a></span>
+                  <span class="cart-project"><a href="#">Project</a></span>
+                </div>
               </div>
-              <div class="second-cart">
-                <span class="cart-github"><a href="https://github.com/asd95" target="_blank">GitHub</a></span>
-                <span class="cart-project"><a href="#">Project</a></span>
-              </div>
+              <img src="./src/img/project-img/pbox1.jpg" alt="">
             </div>
-            <img src="./src/assets/img/project-img/pbox1.jpg" alt="">
-          </div>
-          <div class="box-item"><img src="./src/assets/img/project-img/pbox2.jpg" alt=""></div>
-          <div class="box-item"><img src="./src/assets/img/project-img/pbox3.jpg" alt=""></div>
-          <div class="box-item"><img src="./src/assets/img/project-img/pbox4.jpg" alt=""></div>
-          <div class="box-item"><img src="./src/assets/img/project-img/pbox5.jpg" alt=""></div>
-          <div class="box-item"><img src="./src/assets/img/project-img/pbox6.jpg" alt=""></div>
-          <div class="box-item"><img src="./src/assets/img/project-img/pbox7.jpg" alt=""></div>
-          <div class="box-item"><img src="./src/assets/img/project-img/pbox8.jpg" alt=""></div>
+          <div class="box-item all layout"><img src="./src/img/project-img/pbox2.jpg" alt=""></div>
+          <div class="box-item all js"><img src="./src/img/project-img/pbox3.jpg" alt=""></div>
+          <div class="box-item all react"><img src="./src/img/project-img/pbox7.jpg" alt=""></div>
+          <div class="box-item all features"><img src="./src/img/project-img/pbox4.jpg" alt=""></div>
+          <div class="box-item all react"><img src="./src/img/project-img/pbox5.jpg" alt=""></div>
+          <div class="box-item all layout"><img src="./src/img/project-img/pbox6.jpg" alt=""></div>
+          <div class="box-item all react"><img src="./src/img/project-img/pbox8.jpg" alt=""></div>
+          <div class="box-item all react"><img src="./src/img/bg1.jpg" alt=""></div>
         </div>
       </div>
     </container>
@@ -233,7 +257,7 @@
   <!---------------------------------- /CONTACTS ---------------------------------->
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="./src/assets/js/index.js"></script>
+  <script src="./src/js/index.js"></script>
 </body>
 
 </html>
