@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css?family=Chewy|Permanent+Marker|Gloria+Hallelujah|Montserrat&display=swap"
+  <link href="https://fonts.googleapis.com/css?family=Chewy|Gloria+Hallelujah|Permanent+Marker|Montserrat&display=swap"
     rel="stylesheet" />
   <script src="https://kit.fontawesome.com/be8f276517.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="./src/css/style.css" />
   <link rel="stylesheet" href="./src/css/media-queries.css" />
   <link rel="icon" href="./src/img/technology1.svg">
@@ -37,7 +38,7 @@
     </nav>
     <div class="social-media">
       <div class="social-media_item">
-        <a href="www.linkedin.com/in/arturseu" target="blank"><i class="fab fa-linkedin"></i></a>
+        <a href="www.linkedin.com/in/arturseu" target="blank"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <div class="social-media_item">
         <a href="https://github.com/asd95" target="blank"><i class="fab fa-github"></i></a>
@@ -107,7 +108,7 @@
   <!---------------------------------- ABOUTME ---------------------------------->
   <section class="aboutme" id="aboutme">
     <container class="container">
-      <div class="i-am">
+      <div class="i-am" data-aos="fade-right">
         <span class="who">{ Who I am }<span class="dev">Developer?</span></span>
         <p class="my-desc">
           Возможно одно из самых прекрасных вещей что может сделать человек - созидать.
@@ -120,7 +121,7 @@
           а самое главное пытаюсь создать что-то свое. Делай просто, просто делай!
         </p>
       </div>
-      <div class="interesting-inform">
+      <div class="interesting-inform" data-aos="fade-left">
         <ul class="features">
           <li class="features__item"><span class="font-marker">-</span> Хотел бы оказаться на место Илона Маска</li>
           <li class="features__item"><span class="font-marker">-</span> Восхищаюсь Таносом</li>
@@ -141,8 +142,8 @@
     <container class="container">
       <!-- tech -->
       <div class="tech">
-        <h1 class="tech__title">- stack -<span class="web-tech">Tech</span></h1>
-        <div class="tech-items">
+        <h1 class="tech__title" data-aos="fade-left">- stack -<span class="web-tech">Tech</span></h1>
+        <div class="tech-items" data-aos="fade-right">
           <div class="tech-item">
             <img src="https://img.icons8.com/color/48/000000/html-5.png" />
             <span class="tech-item__name">HTML5</span>
@@ -197,11 +198,11 @@
 
       <div class="projects">
 
-        <h2 class="projects-title">
+        <h2 class="projects-title" data-aos="fade-left">
           - Projects -
         </h2>
 
-        <nav class="navbar-proj">
+        <nav class="navbar-proj" data-aos="fade-bottom">
           <ul class="navbar-nav-proj">
             <li class="navbar-nav-proj__item active-link" data-filter=".all">All</li>
             <li class="navbar-nav-proj__item" data-filter=".layout">Layout</li>
@@ -211,16 +212,13 @@
           </ul>
         </nav>
 
-        <div class="project-box ">
+        <div class="project-box" data-aos="fade-right">
           <div class="box-item all js">
               <div class="box-cart">
-                <div class="first-cart">
-                  <span class="desc-proj">UI Library</span>
-                  <i class="far fa-eye"></i>
-                </div>
+                  <span class="desc-proj">UI Library.</span>
                 <div class="second-cart">
-                  <span class="cart-github"><a href="https://github.com/asd95" target="_blank">GitHub</a></span>
-                  <span class="cart-project"><a href="#">Project</a></span>
+                  <a class="cart-github" href="https://github.com/asd95" target="_blank">GitHub</a>
+                  <a class="cart-project" target="_blank" href="#">Project</a>
                 </div>
               </div>
               <img src="./src/img/project-img/pbox1.jpg" alt="">
@@ -246,16 +244,17 @@
     <container class="container">
       <!-- <h3>Contacts</h3> -->
       <ul class="contacts-list">
-        <li class="list-item">My number: +(373)60180805</li>
-        <li class="list-item">Email: arturseu@gmail.com</li>
+        <li class="list-item" data-aos="fade-left">My number: +(373)60180805</li>
+        <li class="list-item" data-aos="fade-top">Email: arturseu@gmail.com</li>
       </ul>
-      <span class="gb">I'm glad you were here /</span>
+      <span class="gb" data-aos="fade-right">I'm glad you were here /</span>
       <!-- <span class="gb">Thanks for watching /</span> -->
     </container>
     <!-- /.container -->
   </section>
   <!---------------------------------- /CONTACTS ---------------------------------->
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="./src/js/index.js"></script>
 </body>

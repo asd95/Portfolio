@@ -1,10 +1,10 @@
-// 
+//
 let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-window.addEventListener('resize', () => {
+window.addEventListener("resize", () => {
   let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
 });
 
 // ОФОРМЛЯЕМ НАВИГАЦИОННОЕ МЕНЮ
@@ -16,12 +16,73 @@ $(function () {
     // let heightHeader = $(".header").height();
     let h = $(selector);
 
-    $("html, body").animate({
+    $("html, body").animate(
+      {
         scrollTop: h.offset().top,
       },
       450
     );
   });
+});
+
+//------- Filter  js --------//
+$(".navbar-nav-proj__item").click(function () {
+  $(".navbar-nav-proj__item").removeClass("active-link");
+  $(this).addClass("active-link");
+
+  let elem = $(this).data("filter");
+  let items = $(".project-box").find(elem);
+  $(".box-item").fadeOut(200);
+  setTimeout(() => {
+    $(items).fadeIn(150);
+  }, 195);
+});
+
+//  ACTIVE MOBILE MENU
+$(".wrapper-menu").click(function () {
+  $(this).toggleClass("open");
+  $(".mobile-menu").fadeToggle(300);
+});
+
+let navMobile = $(".mobile-nav__item a");
+$(function () {
+  navMobile.on("click", function () {
+    let selector = $(this).attr("href");
+    $(".mobile-menu").fadeOut(300);
+    $(".wrapper-menu").removeClass("open");
+
+    // let heightHeader = $(".header").height();
+    let h = $(selector);
+
+    $("html, body").animate(
+      {
+        scrollTop: h.offset().top,
+      },
+      450
+    );
+  });
+});
+
+// RESIZE WINDOW/ FOR MOBILE
+window.addEventListener("resize", function () {
+  let wh = screen.width;
+  if (wh >= 567) {
+    let mobpopup = document.querySelector(".mobile-menu");
+    mobpopup.style.display = "none";
+    let menu = document.querySelector(".wrapper-menu");
+    if (menu.classList.contains("open")) {
+      menu.classList.remove("open");
+    }
+  }
+});
+
+//  ANIMATION CONTENT
+AOS.init({
+  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 75, // offset (in px) from the original trigger point
+  delay: 100, // values from 0 to 3000, with step 50ms
+  duration: 500, // values from 0 to 3000, with step 50ms
+  easing: "ease", // default easing for AOS animations
 });
 
 // НАВИГАЦИОННОЕ МЕНЮ //////////////////////////
@@ -89,69 +150,3 @@ $(function () {
 //     ) {
 //       highlightLink('contact');
 //     }
-
-//     // Prevent Hover on Scroll
-//     clearTimeout(lockTimer);
-//     if (!$('body').hasClass('disable-hover')) {
-//       $('body').addClass('disable-hover');
-//     }
-
-//     lockTimer = setTimeout(function() {
-//       $('body').removeClass('disable-hover');
-//     }, 500);
-//   });
-
-//   function highlightLink(anchor) {
-//     $('nav .active').removeClass('active');
-//     $('nav')
-//       .find('[dest="' + anchor + '"]')
-//       .addClass('active');
-//   }
-
-
-//------- Filter  js --------//  
- $('.navbar-nav-proj__item').click(function () {
-   $('.navbar-nav-proj__item').removeClass('active-link');
-   $(this).addClass('active-link');
-
-   let elem = $(this).data('filter');
-   let items = $('.project-box').find(elem);
-   $('.box-item').fadeOut(300);
-   setTimeout(() => {
-    $(items).fadeIn('slow')
-     
-   }, 295)
-   
-
-  //  var data = $(this).attr('data-filter');
-  //  $grid.isotope({
-  //    filter: data
-  //  })
- });
-
-
-//  ACTIVE MOBILE MENU
-
-$('.wrapper-menu').click(function () {
-  $(this).toggleClass('open');
-  $('.mobile-menu').fadeToggle(300);
-})
-
-let navMobile = $(".mobile-nav__item a");
-
-$(function () {
-  navMobile.on("click", function () {
-    let selector = $(this).attr("href");
-    $('.mobile-menu').fadeOut(300);
-    $('.wrapper-menu').removeClass('open');
-
-    // let heightHeader = $(".header").height();
-    let h = $(selector);
-
-    $("html, body").animate({
-        scrollTop: h.offset().top,
-      },
-      450
-    );
-  });
-});
