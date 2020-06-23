@@ -25,14 +25,15 @@
 }
 
 body {
+  height: 100%;
   min-height: 100vh;
+  position: relative;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   color: #eee;
   user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
-  /* overflow: hidden; */
 }
 
 a {
@@ -40,7 +41,6 @@ a {
   font-weight: bold;
   text-decoration: none;
   color: #fff;
-  /* text-transform: uppercase; */
   transition: ease-in-out 0.2s;
 }
 
@@ -55,7 +55,6 @@ a:hover {
   margin: 0 auto;
   overflow: hidden;
 }
-
 /* -------------------- HEADER -------------------- */
 .header {
   width: 100%;
@@ -93,8 +92,6 @@ a:hover {
 }
 
 .item-link {
-  /* font-size: .9rem; */
-  /* font-weight: normal; */
   text-transform: uppercase;
   font-family: 'Gloria Hallelujah', sans-serif;
 }
@@ -215,13 +212,12 @@ a:hover {
 .main {
   position: relative;
   background: url(../img/bg.jpg) no-repeat center center fixed;
-  /* background: url(../img/project-img/bg-footer17.jpg) no-repeat center center fixed; */
+  background: url(../img/project-img/bg-footer17.jpg) no-repeat center center fixed;
   background-size: cover;
   z-index: 1;
   width: 100%;
-  height: 100%;
-  min-height: calc(var(--vh, 1vh) * 100);
-  /* display: none; */
+  /* min-height: 100%; */
+  /* min-height: calc(var(--vh, 1vh) * 100); */
 }
 
 .main::after {
@@ -231,8 +227,8 @@ a:hover {
   left: 0;
   height: 100%;
   width: 100%;
-  background: #000;
-  opacity: 0.5;
+  background-color: #000;
+  opacity: 0.6;
   z-index: -1;
 }
 
@@ -305,7 +301,6 @@ a:hover {
 
 .aboutme {
   background-color: #0c0c0c;
-  /* display: none; */
 }
 
 .aboutme .container {
@@ -376,7 +371,6 @@ a:hover {
 
 .portfolio {
   background-color: #0e0d0d;
-  /* display: none; */
 }
 
 .portfolio .container {
@@ -420,8 +414,6 @@ a:hover {
   display: flex;
   flex-flow: row wrap;
   z-index: 1;
-  /* display: grid; */
-  /* grid-template-columns: repeat(12, 1fr); */
 }
 
 .tech-item {
@@ -451,10 +443,6 @@ a:hover {
 
 /* PROJECTS */
 
-/* .projects {
-
-} */
-
 .projects-title {
   position: relative;
   padding: .3rem .5rem;
@@ -464,7 +452,6 @@ a:hover {
   letter-spacing: .3rem;
   color: #fed104;
   z-index: 1;
-  /* border-bottom: 1px solid #333; */
 }
 
 .navbar-nav-proj {
@@ -563,18 +550,13 @@ a:hover {
 }
 
 .box-cart .desc-proj {
-  /* margin-left: 1rem; */
   font-size: 1.1rem;
+  color: #0e0d0d;
+  background-color: #fed104;
+  padding: .2rem;
 }
 
 /* second-cart */
-  .second-cart {
-    /* display: flex; */
-    /* flex-flow: column; */
-    /* align-items: flex-start; */
-    /* margin-left: 3rem; */
-  }
-  
 .second-cart a {
   display: inline-block;
   color: #fff;
@@ -584,6 +566,8 @@ a:hover {
 }
 .second-cart a:hover {
   background-color: #333;
+  background-color: #fed104;
+  color: #0c0c0c;
 }
 /* /second-cart */
 
@@ -595,9 +579,7 @@ a:hover {
 /* -------------------- CONTACTS -------------------- */
 .contacts {
   position: relative;
-  /* display: none; */
   min-height: 100vh;
-  /* border-top: 5px solid #fed104; */
 }
 
 .contacts h3 {
@@ -609,10 +591,7 @@ a:hover {
   position: absolute;
   width: 100%;
   min-height: 100%;
-  /* min-height: calc(var(--vh, 1vh) * 1); */
-  /* background: url(../img/project-img/bg-footer17.jpg) no-repeat top center; */
   background: url(../img/project-img/bg-footer14.jpg) no-repeat top center;
-  /* background-size: cover; */
   left: 0;
   bottom: 0;
   z-index: -1;
@@ -633,7 +612,7 @@ a:hover {
   bottom: 0;
   min-width: 100%;
   min-height: 100vh;
-  height: calc(var(--vh, 1vh) * 35);
+  min-height: calc(var(--vh, 1vh) * 35);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -652,23 +631,16 @@ a:hover {
 }
 
 .contacts-list .list-item {
-  color: #000;
   color: #fed104;
-  padding: 1rem;
-  background-color: #9B41D5;
-  background-color: rgb(255, 183, 0);
-  background-color: #000;
   margin: 1.4rem;
+  padding: 1rem;
+  background-color: #000;
 }
 
 .contacts .gb {
   font-size: 2rem;
   padding: 1rem;
-  color: #9B41D5;
-  color: #fff;
   color: #fed104;
-  background-color: #9B41D5;
-  background-color: rgb(255, 183, 0);
   background-color: #000;
 }
 

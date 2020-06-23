@@ -255,6 +255,9 @@
     .tech-items {
         justify-content: center;
     }
+    .navbar-nav-proj__item {
+        font-size: .8rem;
+    }
 
 }
 
